@@ -1,0 +1,24 @@
+{
+  "name": "slotswapper-app",
+  "version": "1.0.0",
+  "description": "SlotSwapper - Peer-to-peer time-slot scheduling application",
+  "main": "index.js",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm install && npm run install:backend && npm run install:frontend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "cd frontend && npm run build",
+    "start:production": "cd backend && NODE_ENV=production node server.js",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "keywords": ["react", "express", "mongodb", "slot-swapper"],
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
